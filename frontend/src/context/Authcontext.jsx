@@ -11,7 +11,7 @@ export  function Authcontext({children}) {
 
   let loginUser = async (e)=>{
     e.preventDefault()
-    let response=  await fetch('http://127.0.0.1:8000/api/token/',{
+    let response=  await fetch('/api/token/',{
       method:'POST',
       headers: {
         'content-type':'application/json'
@@ -38,7 +38,7 @@ export  function Authcontext({children}) {
   }
 
   let updateToken =  async ()=>{
-    let response=  await fetch('http://127.0.0.1:8000/api/token/refresh/',{
+    let response=  await fetch('/api/token/refresh/',{
       method:'POST',
       headers: {
         'content-type':'application/json'
@@ -57,7 +57,7 @@ export  function Authcontext({children}) {
 
   }
   let REG = async (username,email,password,password2)=>{
-    let response= await fetch('http://127.0.0.1:8000/api/register/',{
+    let response= await fetch('/api/register/',{
       method:'POST',
       headers: {
         'content-type':'application/json'
@@ -72,7 +72,7 @@ export  function Authcontext({children}) {
     }
   }
   let forget =async (email)=>{
-    let response = await fetch('http://127.0.0.1:8000/api/forget/',{
+    let response = await fetch('/api/forget/',{
       method:'POST',
       headers: {
         'content-type': 'application/json'
@@ -81,7 +81,7 @@ export  function Authcontext({children}) {
     })
   }
   let rest = async (token,password,password2)=>{
-    let response = await fetch('http://127.0.0.1:8000/api/reset/',{
+    let response = await fetch('/api/reset/',{
       method:'POST',
       headers: {
         'content-type': 'application/json'
