@@ -8,7 +8,7 @@ export default function Info() {
   let {authToken} =useContext(Auth)
   let getInfo =async ()=>{
     if(id !== "new"){
-     let response = await fetch(`http://127.0.0.1:8000/api/names/${ id }/`)
+     let response = await fetch(`/api/names/${ id }/`)
      let data = await response.json()
      setInfo(data)
     }
@@ -18,7 +18,7 @@ export default function Info() {
   },[id])
 
   let update =async ()=>{
-        await fetch(`http://127.0.0.1:8000/api/names/${ id }/update`, {
+        await fetch(`/api/names/${ id }/update`, {
             method: "PUT",
             headers: {
                 'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ export default function Info() {
         });
   };
   let Create =async ()=>{
-        await fetch('http://127.0.0.1:8000/api/names/new', {
+        await fetch('/api/names/new', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ export default function Info() {
         })
   }
   let deleteInfo = async ()=>{
-    await fetch(`http://127.0.0.1:8000/api/names/${ id }/delete`, {
+    await fetch(`/api/names/${ id }/delete`, {
       method: "DELETE",
       headers: {'Content-Type': 'application/json',
       'Authorization':'Bearer ' + String(authToken?.access)
