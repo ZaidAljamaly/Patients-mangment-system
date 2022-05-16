@@ -1,0 +1,30 @@
+.navbar-toggler {
+    border: 0;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+}
+
+.toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: blue;
+    display: block;
+    transition: all 0.2s;
+}
+
+.middle-bar {
+    margin: 5px;
+}
+
+
+
+.nav {
+    width: 100% !important;
+    white-space: nowrap !important ;
+}
