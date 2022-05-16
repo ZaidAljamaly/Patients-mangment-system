@@ -12,7 +12,7 @@ export default function Home() {
     getPatient()
   },[item])
   let getPatient = async ()=>{
-    let response = await fetch(`http://127.0.0.1:8000/api/names/?q=${ item }`,{
+    let response = await fetch(`/api/names/?q=${ item }`,{
       method:'GET',
       headers: {
         'content-type': 'application/json',
