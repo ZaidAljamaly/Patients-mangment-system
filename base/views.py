@@ -84,7 +84,7 @@ def Forgot(request):
     send_mail(
         subject='Reset your password!',
         message='Click <a href="%s">here</a> to reset your password!' % url,
-        from_email='zaidaljamaly90@gmail.com',
+        from_email='email',
         recipient_list=[email]
     )
 
